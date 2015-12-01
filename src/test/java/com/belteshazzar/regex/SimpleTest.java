@@ -1,6 +1,6 @@
 package com.belteshazzar.regex;
 
-import java.util.LinkedList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
@@ -20,21 +20,22 @@ public class SimpleTest
 				.add(')')
 				.compile();
 		
-		List<String> input = new LinkedList<String>();
-		input.add("not");
-		input.add("matches");
-		input.add("matches");
-		input.add("not");
-		input.add("matches");
-		input.add("not");
-		input.add("matches");
-		input.add("matches");
-		input.add("not");	
+		List<String> input = Arrays.asList(
+				"not",
+				"matches",
+				"matches",
+				"not",
+				"matches",
+				"not",
+				"matches",
+				"matches",
+				"not");	
 		
 		Matcher<String> matcher = pattern.matcher(input);
 		
 		while (matcher.find())
 		{
+			System.out.println(matcher.start());
 			System.out.println(matcher.group());
 			System.out.println(matcher.group(0));
 			System.out.println(matcher.group(1));
