@@ -14,6 +14,7 @@
 	<name>Object Regex</name>
 	<description>Regular expressions over Objects</description>
 	<url>https://github.com/belteshazzar/regex</url>
+
 	<licenses>
 		<license>
 			<distribution>repo</distribution>
